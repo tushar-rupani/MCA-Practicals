@@ -1,0 +1,6 @@
+t1 = (159, 'tushar', 'A')
+print(f"{t1} before deleting..")
+lst = list(t1)
+lst.pop(2)
+t1 = tuple(lst)
+print("after", t1)

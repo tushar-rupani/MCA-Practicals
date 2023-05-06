@@ -1,0 +1,14 @@
+.emp-data
+{
+    box-shadow: 1px 3px 5px rgba(0,0, 0, 0.2);
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+}
+.final-data{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-family: sans-serif;
+}

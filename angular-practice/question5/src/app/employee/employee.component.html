@@ -1,0 +1,29 @@
+<div class="my-data">
+    <div class="emp-data" *ngFor="let employee of employees" (click) = "myClick(employee)">
+        Number:<h2>{{employee.employee_number}}</h2>
+        Name: <h2>{{employee.name}}</h2>
+        Designation: <h2>{{employee.designation}}</h2>
+        Department No: <h2>{{employee.dno}}</h2>
+        Salary: <h2>{{employee.salary}}</h2>
+        Has Left: <h2>{{employee.hasLeft}}</h2>
+    </div>
+    <br>
+</div>
+<br>
+    
+    <form #form="ngForm" *ngIf="currentEmployee">
+        <label for="name">Employee Name: </label><br>
+        <input type="text" name="name" [(ngModel)] = "currentEmployee.name" [disabled]="!enableTxtBox"><br>
+        <label for="designation">Employee Designation: </label><br>
+        <input type="text" name="designation" [(ngModel)] = "currentEmployee.designation" [disabled]="!enableTxtBox"><br>
+        <label for="dept">Employee Department: </label><br>
+        <input type="text" name="dept"  [(ngModel)] = "currentEmployee.dno" [disabled]="!enableTxtBox"><br>
+        <label for="salary">Employee salary: </label><br>
+        <input type="text" name="salary"  [(ngModel)] = "currentEmployee.salary" [disabled]="!enableTxtBox"><br>
+        <label for="left">Employee Left?: </label><br>
+        <input type="text" name="left"  [(ngModel)] = "currentEmployee.hasLeft" [disabled]="!enableTxtBox"><br>   
+    
+        <input type="checkbox" name="enableTxtBox" [(ngModel)]="enableTxtBox">
+        Enable <b>{{enableTxtBox}}</b>
+    </form>
+   
